@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export ARCH=arm
+export _XXCFLAGS="-march=armv7-a -mfpu=neon -mfloat-abi=softfp -mtune=cortex-a8 -fomit-frame-pointer -fno-math-errno -fno-signed-zeros -fno-tree-vectorize -O3 -Ofast --strip-unneeded"
+export CROSS_COMPILE=/home/tristan202/Android/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/arm-linux-androideabi-
+export PATH=$PATH:/home/tristan202/Android/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin
+
+make -j2
